@@ -14,12 +14,14 @@
 *! 1. Color Palette
 **********************************/
 /**********************************
-*! 1. Basic Setup
+*! 2. Basic Setup
 **********************************/
+
 * {
-  font-family:'FFDINWebConBold', sans-serif;
+  font-family:formationFont, sans-serif;
   box-sizing: border-box;
   scroll-behavior: smooth;
+  font-size: 20px;
 }
 
 a:hover {
@@ -31,23 +33,37 @@ a {
   text-decoration: none;
 }
 
+h1 {
+  text-transform: uppercase;
+  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 );
+  text-align: center;
+}
+
+h2 {
+  text-transform: uppercase;
+  text-align: center;
+}
 /**********************************
 *! 3. Navigation Bar
 **********************************/
 .header {
-  padding: 20px;
+  margin: 20px;
+  color: #ffffff;
+}
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 .nav-bar {
   display: flex;
   justify-content: center;
-  /* align-items: center; */
   text-align: right;
   float: right;
   margin-left: auto;
   margin-right: 0;
 }
 .nav-item {
-  /* margin: 10px; */
   padding: 10px;
   color: #000000;
 }
@@ -58,8 +74,9 @@ a {
 **********************************/
 
 .banner {
-  background-image: url(./sandstone-rock-texture.jpg);
+  background-image: url(./formation-stone-banner.jpg) ;
   display: flex;
+  background-position: center;
   position: relative;
   flex-direction: column;
   width: 100%;
@@ -69,13 +86,16 @@ a {
 
 .content {
   color: #ffffff;
+  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
+  max-width: 1100px;
+  margin: 0 auto;
   text-align: center;
-  width: 100%;
-  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
-  padding: 30px;
+  padding: 300px 0;
+
+  /* width: 100%;
   position: absolute;
   top: 40%;
-  margin-top: 25px;
+  margin-top: 25px; */
 }
 
 .scrl-down {
@@ -86,7 +106,7 @@ a {
   padding-bottom: 100px;
   position: fixed;
   bottom: 10px;
-  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 );
+  font-size: calc(1rem * 1.2 * 1.2 );
   height: 47px;
   background : url(//www.formationstone.com/wp-content/themes/Ignyte/images/down-arrow-02.svg) top center no-repeat;
 }
@@ -96,12 +116,12 @@ a {
 *! 5. About Us and Products
 **********************************/
 
-.about, .our-products {
+/* .about, .our-products {
   text-align: center;
   padding: 140px ;
   font-weight: normal;
   font-style: normal;
-}
+} */
 
 .about {
   background-color:#4c4845;
@@ -110,39 +130,243 @@ a {
   min-height: 766px;
 }
 
+.about-content, .our-products, .services-title {
+  margin: 0 auto;
+  max-width: 1100px;
+  text-align: center;
+  padding: 120px 0;
+}
+
 .about p { 
   text-align: justify;
 }
 
 .about h1, .our-products h1 {
-  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 * 1.2);
   color: #c9aa5d;
 }
 .about a{
   color: #ffffff;
 }
-.about h2, .our-products h2 {
-  padding : 50px;
-}
-.contact-link {
+
+.contact-link-yellow {
   text-decoration: underline;
+  font-weight: bold;
+  color: #c9aa5d;
 }
 
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(275px, 1fr));
   display: grid;
-  height: 130em;
-  justify-content: center;
-  align-content: end;
-  grid-gap: 7px;
+  /* justify-content: center; */
+  /* align-content: end; */
+  /* grid-gap: 1px; */
 }
+
 .img-container {
   width: 275px;
   height: 275px;
+  background-color: #c9aa5d;
+  margin-bottom: 0;
+  line-height: 22px;
+  transition: all ease-in .3s;
+  display: inline-block;
 }
 
+.our-prods-bg {
+  background-image: url(./formationslab-location-bg.jpg);
+  background-position: center;
+  width: 100%;
+}
+
+.services-title {
+  margin: 0 auto;
+  max-width: 1100px;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 ); 
+  /*padding: 18% 0;
+  text-align: center;
+  margin: 0;*/
+}
+/**********************************
+*! 6. WHAT WE OFFER
+**********************************/
+
+
+.offer-item {
+  padding: 15px 30px;
+  margin: 0 auto;
+  width: 50%;
+  display: inline-block;
+  text-align: center;
+  color: #4c4845;
+}
+.offer-container {
+  text-align: center;
+  margin: 0 auto;
+  width: 100%;
+}
+.location-images{
+  padding-top: 20px;
+}
+.loc-img{
+  width: 33%;
+  display: inline-block;
+  vertical-align: bottom;
+}
+.second {
+  /* border-right: 5px #FFF solid;
+  border-left: 5px #FFF solid; */
+  padding: 0 5px;
+}
+.background-grey{
+  background-color: #4c4845;
+  color: #ffffff;
+  width: 100%;
+}
+.world-map {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px 0;
+}
+.map-img{
+  padding: 20px 0;
+}
+.contact-link-white {
+  color: #ffffff;
+  text-decoration: underline;
+  font-weight: bold;
+}
+/**********************************
+*! 6. CAROUSEL
+**********************************/
+.carousel-container{
+  margin: 0 auto;
+  /* width: 100%; */
+  max-width: 1100px;
+  color: #c9aa5d;
+  text-align: center;
+  padding: 80px 0;
+  /* display: grid; */
+}
+.carousel-content {
+  padding-top: 30px;
+}
+.carousel-item {
+  display: flex;
+  flex-direction:row ;
+}
+.carousel-img {
+  flex-basis: 30%;
+  display: inline-block;
+}
+.carousel-item-detail {
+  display: inline-block;
+  text-align: left;
+  color: #4c4845;
+  flex-basis: 70%;
+}
+.btn-back, .btn-next {
+  position: absolute;
+  /* top: 50%; */
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.btn-back {
+  left: 0;
+  background-image: url('./formation-stone-banner.jpg');
+}
+.btn-next {
+  right: 0;
+}
 
 /**********************************
-*! 6. OUR PRODUCTS
+*! 6. CONTACT US
 **********************************/
+.contact-us-container {
+  /* text-align: center; */
+  /* margin: 0 auto;
+  max-width: 1100px; */
+  width: 100%;
+}
+.contact-us-1 {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px 0;
+}
+.contact-us-1 h3{
+  color: #c9aa5d;
+  padding: 0 20px;
+}
+.contact-us-container h1 {
+  color: #c9aa5d;
+}
+.contact-item-container {
+  width: 33.33%;
+  display: inline-block;
+  padding: 0 5px;
+}
+.contact-item-container h3{
+  text-transform: uppercase;
+}
+/*Contact Form*/
+.contact-form {
+  color: #4c4845;
+  padding: 0px 20px;
+}
+.input-text {
+  border: none;
+  width: 100%;
+  padding: 20px 0 5px 0;
+  color: #4c4845;
+}
+.input-text:focus {
+  outline: none;
+}
+.btn-send {
+  background-color: #c9aa5d;
+  color: #ffffff;
+  border-color: #ffffff;
+  width: 100px;
+  height: 40px;
+}
+.btn-send:hover {
+  background-color: #ffffff;
+  color: #c9aa5d;
+  border-color: #c9aa5d;
+}
+
+/*Footer*/
+.footer-bck{
+  background-color: #4c4845;
+}
+.footer-container {
+  margin: 0 auto;
+  max-width: 1100px;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 30% 30% 30% auto;
+}
+.footer-container a {
+  color: #ffffff;
+}
+.address-item {
+  color: #ffffff;
+}
+.dot-group{
+  align-self: center;
+}
+.carousel-feedback{
+  background-color: #c9aa5d;
+  text-align: center;
+}
+.carousel-container {
+  color: #ffffff;
+  margin: 0 auto;
+  max-width: 1000px;
+}
+.slider-main {
+  padding: 20px 0;
+  line-height: 2;
+}

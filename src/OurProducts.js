@@ -23,7 +23,6 @@ const OurProducts = () => {
         <Tile imgUrl={Sapienstone} name='Sapienstone' />
         <Tile imgUrl={Vetrazzo} name='Vetrazzo' />
         <Tile imgUrl={TilesMosaic} name='Tiles and Mosaic' />
-
       </div>
     </div>
   )
