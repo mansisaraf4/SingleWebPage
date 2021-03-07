@@ -1,11 +1,11 @@
-import Granite from './granite.jfif'
-import Marbel from './marble.jfif'
-import Quartzite from './Quartzite.jpg'
-import Sapienstone from './Sapienstone.jpg'
-import TilesMosaic from './TilesMosaic.jpg'
-import Limestone from './Limestone.jpg'
-import Caeserstone from './CaeserStone.jpg'
-import Vetrazzo from './Bistro.jpg'
+import Granite from './images/granite.jfif'
+import Marbel from './images/marble.jfif'
+import Quartzite from './images/Quartzite.jpg'
+import Sapienstone from './images/Sapienstone.jpg'
+import TilesMosaic from './images/TilesMosaic.jpg'
+import Limestone from './images/Limestone.jpg'
+import Caeserstone from './images/CaeserStone.jpg'
+import Vetrazzo from './images/Bistro.jpg'
 import Tile from './Tile'
 
 const OurProducts = () => {
@@ -14,7 +14,7 @@ const OurProducts = () => {
       <h2 > <span>WHAT WE OFFER </span> </h2>
       <h1> OUR PRODUCTS</h1>
       <p>Contemporary, rustic, elegant, or whimsical—whatever your artistic vision may be, we have the medium to bring it to life. We carry only the finest natural stone and tile lines, each with a character all its own.</p>
-      <div className='grid-container'>
+      <div className='flex-container'>
         <Tile imgUrl={Granite} name='Granite' />
         <Tile imgUrl={Marbel} name='Marbel' />
         <Tile imgUrl={Quartzite} name='Quartizite and Natural Stone' />

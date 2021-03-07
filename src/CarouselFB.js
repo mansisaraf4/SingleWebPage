@@ -15,7 +15,7 @@ const CarouselFB = () => {
   }
   return (
     <div className='carousel-feedback' id='clients-say'>
-      <div className='carousel-container'>
+      <div className='carouselfb-container'>
       <h2>Hear what our local clients have to say</h2>
       <CarouselProvider
         naturalSlideWidth={100}

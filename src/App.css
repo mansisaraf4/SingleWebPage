@@ -4,10 +4,13 @@
 *? 2. Basic Setup
 *? 3. Navigation Bar
 *? 4. Banner
-*? 5. About Us
-*? 6. Our Products
-*? 7. List Page
-*? 8. Full form Page
+*? 5. About Us and Products
+*? 6. What we offer
+*? 7. Carousel
+*? 8. Contact-us
+*? 9. Contact-us form
+*? 10. Footer
+*? 11. Feedback Carousel
 **********************************/
 
 /**********************************
@@ -46,41 +49,221 @@ h2 {
 /**********************************
 *! 3. Navigation Bar
 **********************************/
+/*****/
+/*Desktop View*/
 .header {
+  display: flex;
+  background: #ffffff;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 40px;
+  height: 80px;
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.logo-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.logo {
+  width: 45px;
+  height: 45px;
+}
+.nav-options {
+  padding-right: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 50px;
+  list-style-type: none;
+  text-align: right;
+}
+.mobile-option {
+  display: none;
+}
+
+.option :hover {
+  color: #c9aa5d;
+}
+.mobile-menu {
+  display: none;
+}
+@media (max-width: 648px) {
+  /*Mobile View */
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-options {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 60px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+  .nav-options.active {
+    background: #c9aa5d;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+  }
+
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .option {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+}
+.mobile-menu {
+  display: block;
+}
+
+/**********************************
+*! 3. Navigation Bar
+**********************************/
+
+/******DESKTOP VIEW******/
+/* .header {
   margin: 20px;
   color: #ffffff;
-}
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-.nav-bar {
   display: flex;
-  justify-content: center;
-  text-align: right;
-  float: right;
+  align-items: center;
+  padding: 0 20px;
+}
+.logo-div {
+  display: flex;
+}
+.logo-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.nav-options {
+  padding-left: 25px;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 50px;
+  list-style-type: none;
   margin-left: auto;
   margin-right: 0;
 }
-.nav-item {
+.nav-bar {
+  display: flex;
+  text-align: right;
+  float: right;
+  margin-left: auto;
+}*/
+/* .nav-item {
   padding: 10px;
   color: #000000;
+  display: flex;
+} */
+/* .mobile-option {
+  display: none;
 }
 
+.nav-item :hover {
+  color:#c9aa5d;
+}
+.menu-icon {
+  width: 45px;
+  height: 45px;
+} */
+/******MOBILE VIEW******/
+/*Moblie*/
+/* @media (max-width: 648px) {
+  
+  .header {
+    padding: 0px 10px;
+  }
+  .logo {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-options {
+    display: flex;
+    width: 100%;
+    height: 350px;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    flex-direction: column;
+    list-style-type: none;
+    grid-gap: 0px;
+  }
+  .nav-options.active {
+    background: #9899d1;
+    left: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 1;
+    align-content: center;
+    padding-left: 0px;
+  }
 
+  .menu-icon {
+    width: 45px;
+    height: 45px;
+  }
+  .nav-item {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vw;
+    padding: 30px 0px;
+  }
+  .sign-up {
+    background: rgb(222, 9, 241);
+    border-radius: 3px;
+    color: white;
+    padding: 20px 0px;
+    width: 80%;
+    align-self: center;
+    border-radius: 3px;
+  }
+
+  .signin-up {
+    display: none;
+  }
+}
+.mobile-menu {
+  display: block;
+  float: right;
+} */ 
 /**********************************
 *! 4. Banner
 **********************************/
 
 .banner {
-  background-image: url(./formation-stone-banner.jpg) ;
+  background-image: url(./images/formation-stone-banner.jpg) ;
   display: flex;
   background-position: center;
   position: relative;
   flex-direction: column;
   width: 100%;
-  height: 781px;
   min-height: 766px;
 }
 
@@ -90,12 +273,7 @@ h2 {
   max-width: 1100px;
   margin: 0 auto;
   text-align: center;
-  padding: 300px 0;
-
-  /* width: 100%;
-  position: absolute;
-  top: 40%;
-  margin-top: 25px; */
+  padding: 300px 10px;
 }
 
 .scrl-down {
@@ -115,18 +293,9 @@ h2 {
 /**********************************
 *! 5. About Us and Products
 **********************************/
-
-/* .about, .our-products {
-  text-align: center;
-  padding: 140px ;
-  font-weight: normal;
-  font-style: normal;
-} */
-
 .about {
   background-color:#4c4845;
   color: #ffffff;
-  height: 781px;
   min-height: 766px;
 }
 
@@ -134,7 +303,7 @@ h2 {
   margin: 0 auto;
   max-width: 1100px;
   text-align: center;
-  padding: 120px 0;
+  padding: 120px 10px;
 }
 
 .about p { 
@@ -153,28 +322,32 @@ h2 {
   font-weight: bold;
   color: #c9aa5d;
 }
-
+/* 
 .grid-container {
   grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-template-rows: repeat(auto-fill, minmax(275px, 1fr));
   display: grid;
-  /* justify-content: center; */
-  /* align-content: end; */
-  /* grid-gap: 1px; */
+} */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.img-container > img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .img-container {
-  width: 275px;
-  height: 275px;
-  background-color: #c9aa5d;
-  margin-bottom: 0;
-  line-height: 22px;
-  transition: all ease-in .3s;
-  display: inline-block;
+  /* width: 275px;
+  height: 275px; */
+  margin: 2px;
+  flex: 1 1 275px;
 }
 
 .our-prods-bg {
-  background-image: url(./formationslab-location-bg.jpg);
+  background-image: url(./images/formationslab-location-bg.jpg);
   background-position: center;
   width: 100%;
 }
@@ -185,9 +358,6 @@ h2 {
   color: #ffffff;
   text-transform: uppercase;
   font-size: calc(1rem * 1.2 * 1.2 * 1.2 * 1.2 * 1.2 ); 
-  /*padding: 18% 0;
-  text-align: center;
-  margin: 0;*/
 }
 /**********************************
 *! 6. WHAT WE OFFER
@@ -216,8 +386,6 @@ h2 {
   vertical-align: bottom;
 }
 .second {
-  /* border-right: 5px #FFF solid;
-  border-left: 5px #FFF solid; */
   padding: 0 5px;
 }
 .background-grey{
@@ -228,10 +396,13 @@ h2 {
 .world-map {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 .map-img{
   padding: 20px 0;
+}
+.img {
+  width: 100%;
 }
 .contact-link-white {
   color: #ffffff;
@@ -239,7 +410,7 @@ h2 {
   font-weight: bold;
 }
 /**********************************
-*! 6. CAROUSEL
+*! 7. CAROUSEL
 **********************************/
 .carousel-container{
   margin: 0 auto;
@@ -247,7 +418,7 @@ h2 {
   max-width: 1100px;
   color: #c9aa5d;
   text-align: center;
-  padding: 80px 0;
+  padding: 80px 10px;
   /* display: grid; */
 }
 .carousel-content {
@@ -275,25 +446,22 @@ h2 {
 }
 .btn-back {
   left: 0;
-  background-image: url('./formation-stone-banner.jpg');
+  background-image: url('./images/formation-stone-banner.jpg');
 }
 .btn-next {
   right: 0;
 }
 
 /**********************************
-*! 6. CONTACT US
+*! 8. CONTACT US
 **********************************/
 .contact-us-container {
-  /* text-align: center; */
-  /* margin: 0 auto;
-  max-width: 1100px; */
   width: 100%;
 }
 .contact-us-1 {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 20px 0;
+  padding: 20px 10px;
 }
 .contact-us-1 h3{
   color: #c9aa5d;
@@ -301,6 +469,9 @@ h2 {
 }
 .contact-us-container h1 {
   color: #c9aa5d;
+}
+.contact-det-container {
+  display: flex;
 }
 .contact-item-container {
   width: 33.33%;
@@ -310,7 +481,10 @@ h2 {
 .contact-item-container h3{
   text-transform: uppercase;
 }
-/*Contact Form*/
+
+/**********************************
+*! 9. CONTACT FORM
+**********************************/
 .contact-form {
   color: #4c4845;
   padding: 0px 20px;
@@ -337,14 +511,17 @@ h2 {
   border-color: #c9aa5d;
 }
 
-/*Footer*/
+
+/**********************************
+*! 10. FOOTER
+**********************************/
 .footer-bck{
   background-color: #4c4845;
 }
 .footer-container {
   margin: 0 auto;
   max-width: 1100px;
-  padding: 20px 0;
+  padding: 20px 10px;
   display: grid;
   grid-template-columns: 30% 30% 30% auto;
 }
@@ -354,6 +531,9 @@ h2 {
 .address-item {
   color: #ffffff;
 }
+/**********************************
+*! 11. FEEDBACK CAROUSEL
+**********************************/
 .dot-group{
   align-self: center;
 }
@@ -361,7 +541,7 @@ h2 {
   background-color: #c9aa5d;
   text-align: center;
 }
-.carousel-container {
+.carouselfb-container {
   color: #ffffff;
   margin: 0 auto;
   max-width: 1000px;

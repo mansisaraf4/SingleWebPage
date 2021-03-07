@@ -1,8 +1,8 @@
 const NavigationItem = ({to_id, title}) => {
   return (
-    <div className='nav-item'>
+    <li className='option'>
       <a href={`#${to_id}`}> {title} </a>
-    </div>
+    </li>
   )
 }
 

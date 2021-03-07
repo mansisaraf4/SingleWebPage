@@ -1,13 +1,12 @@
 import OfferItem from './OfferItem'
-import serviceIcon from './icon-service.svg'
-import settingIcon from './icon-setting.svg'
-import inventoryIcon from './icon-inventory.svg'
-import teamIcon from './icon-team.svg'
-import loc1 from './formationslab-location-v1.jpg'
-import loc2 from './formationslab-showroom-v2.jpg'
-import loc3 from './formationslab-location-v3.jpg'
-import map1 from './map-dots.svg'
-import map2 from './map-base.svg'
+import serviceIcon from './images/icon-service.svg'
+import settingIcon from './images/icon-setting.svg'
+import inventoryIcon from './images/icon-inventory.svg'
+import teamIcon from './images/icon-team.svg'
+import loc1 from './images/formationslab-location-v1.jpg'
+import loc2 from './images/formationslab-showroom-v2.jpg'
+import loc3 from './images/formationslab-location-v3.jpg'
+import map2 from './images/map-base.svg'
 
 const WhatWeOffer = () => {
   const settingDetail = 'In addition to a sprawling slab yard stocked with the finest natural stone, we offer a unique retail setting in which to consult with our specialists about your design and architecture needs.'
@@ -35,10 +34,8 @@ const WhatWeOffer = () => {
         <h1> Discovering design in every corner of the globe</h1>
         <p >Formation offers over 1,000 different natural stone and tile products from locations around the world.</p>
         <div className='map-img'>
-          <div>
             {/* <img className='first-map' src={map1} alt='first-map'/> */}
-            <img className='second-map' src={map2} alt='second-map'/>
-          </div>
+            <img className='img' src={map2} alt='second-map'/>
         </div>
         <a href='#contact-us' className='contact-link-white'> Bring a world of design to your next project. Contact us today.</a>
       </div>

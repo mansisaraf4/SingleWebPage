@@ -1,9 +1,9 @@
 import { CarouselProvider, Slider, Slide, ButtonBack, ButtonNext } from 'pure-react-carousel';
 import 'pure-react-carousel/dist/react-carousel.es.css';
-import img1 from './Fact-1.png'
-import img2 from './Fact-2.png'
-import img3 from './Fact-3.png'
-import img4 from './Fact-4.png'
+import img1 from './images/Fact-1.png'
+import img2 from './images/Fact-2.png'
+import img3 from './images/Fact-3.png'
+import img4 from './images/Fact-4.png'
 import CarouselItem from './CarouselItem'
 
 const StoneCarousel = () => {
